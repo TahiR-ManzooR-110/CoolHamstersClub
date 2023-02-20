@@ -435,3 +435,87 @@ body {
   .mint:hover {
     font-size: 10px;
   }
+
+
+
+  .footer {
+    background-color: var(--oxford-blue);
+  }
+  
+  .footer-top {
+    padding-block-start: calc(var(--section-padding) + 200px);
+    border-block-end: 1px solid var(--white_a10);
+  }
+  
+  .footer-top .container {
+    display: grid;
+    gap: 32px;
+  }
+  
+  .footer-brand .footer-text {
+    color: var(--light-gray);
+    margin-block-start: 24px;
+  }
+  .footer-logo-container{
+    width: 86%;
+  }
+  
+  .footer-list-title {
+    margin-block-end: 24px;
+  }
+  
+  .footer-link {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding-block: 5px;
+    color: var(--light-gray);
+  }
+  
+  .footer-link:hover {
+    color: var(--electric-indigo);
+  }
+  
+  .footer-link ion-icon {
+    color: inherit;
+  }
+  
+  .footer-list-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer-list ul:first-child {
+    margin-block-end: 24px;
+  }
+  
+  .footer-list-item ion-icon {
+    color: var(--blue-violet);
+    font-size: 2rem;
+    --ionicon-stroke-width: 40px;
+  }
+  
+  .footer-list-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social {
+    font-size: 35px;
+  }
+  
+  .footer-social:hover ion-icon {
+    color: var(--electric-indigo);
+  }
+  
+  .footer-bottom {
+    padding-block: 30px;
+    color: var(--light-gray);
+  }
+  
+  .copyright .span {
+    display: inline;
+    color: var(--maximum-red);
+  }
