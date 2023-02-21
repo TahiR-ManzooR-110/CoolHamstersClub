@@ -436,6 +436,94 @@ body {
     font-size: 10px;
   }
 
+  .hero {
+    position: relative;
+    --section-padding: 180px 64px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    display: block;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .hero-title .span {
+    background-image: var(--linear-gradient-2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 43px;
+  }
+  
+  .navbar-community-icons {
+    display: flex;
+  }
+  
+  .navbar-community-icons a ion-icon {
+    font-size: 20px;
+  }
+  
+  .navbar-community-icons a:hover ion-icon {
+    color: var(--electric-indigo);
+  }
+  
+  .hero .section-text {
+    color: var(--white);
+    opacity: 0.7;
+    margin-block: 16px 32px;
+  }
+  
+  .hero .btn {
+    margin-inline: auto;
+  }
+  
+  .hero-container {
+    display: flex;
+    width: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  
+  .hero-subcontainer {
+    margin-top: -5rem;
+  }
+  
+  
+  .hero-subcontainer #root {
+    margin-top: -9.3rem;
+  }
+  
+  .gif-and-connect {
+    width: 38%;
+    display: flex;
+    margin-top: -3.5rem;
+  }
+  
+  .gif-container {
+    width: 100%;
+    padding: 2rem;
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    border-radius: 16% 57% 9% 83% / 30% 93% 7% 11%;
+    box-shadow: 
+    inset 0 0 0.5em 0 hsla(262, 83%, 58%, 1),
+    0 0 0.5em 0 hsla(262, 83%, 58%, 1),
+    0 0 1em 0.2em rgba(0, 0, 0, 0.2),
+    0 0 2em 0.3em rgba(0, 0, 0, 0.15),
+    0 0 4em 0.4em rgba(0, 0, 0, 0.1);
+    /* background-color: var(--blue-violet); */
+    /* border-radius: 100px; */
+  }
+  
+  .gif-container img {
+    width: 85%;
+    height: 450px;
+    border-radius: 16% 57% 9% 83% / 30% 93% 7% 11%;
+    margin: auto;
+    /* border-radius: 100px; */
+  }
+
+  
 
 
   .footer {
