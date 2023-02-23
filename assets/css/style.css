@@ -722,6 +722,104 @@ body {
     margin-inline: auto;
     margin-block-start: 32px;
   }
+  .about {
+    margin-bottom: -6rem;
+  }
+  
+  .about-headline {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .about-container {
+    margin-top: -8rem;
+  }
+  
+  .about-description-container {
+    text-align: justify;
+  }
+  
+  .roadmap {
+    margin-top: -1rem;
+    margin-bottom: -2.5rem;
+  }
+  
+  .phase {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    font-size: 25px;
+    font-weight: bold;
+    gap: 1rem;
+    color: white;
+  }
+  
+  .phase-desc {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+  }
+  
+  .sellers {
+    margin-top: -1rem;
+  }
+  
+  .seller-card {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .seller-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .seller-card .card-banner {
+    position: relative;
+    background-color: var(--oxford-blue);
+  }
+  
+  .seller-card .card-banner img {
+    border-radius: inherit;
+  }
+  
+  .seller-card .card-banner ion-icon {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    font-size: 2rem;
+    color: var(--green-cyan);
+  }
+  
+  .seller-card .user-name {
+    margin-block-start: 2px;
+  }
+  
+  .seller-card .btn-icon {
+    flex-shrink: 0;
+    margin-inline-start: auto;
+    border: 1px solid var(--blue-violet_a10);
+    background-color: var(--bg, var(--blue-violet_a5));
+    color: var(--color, var(--blue-violet));
+    transition: var(--transition-1);
+  }
+  
+  .seller-card .btn-icon ion-icon {
+    color: var(--color);
+    --ionicon-stroke-width: 55px;
+  }
+  
+  .seller-card .btn-icon:is(:hover, :focus-visible) {
+    --bg: var(--blue-violet);
+    --color: var(--white);
+  }
+
   
 
 
