@@ -115,3 +115,91 @@ const accordionInit = function (currentAccordion) {
 }
 
 for (let i = 0, len = accordions.length; i < len; i++) { accordionInit(accordions[i]); }
+
+/***************POP UP******************/
+// const popup = document.querySelector('.popup');
+// const x = document.querySelector('.popup-content h1')
+
+// window.addEventListener('load', () => {
+//   popup.classList.add('showPopup');
+//   popup.childNodes[1].classList.add('showPopup');
+// })
+// x.addEventListener('click', () => {
+//   popup.classList.remove('showPopup');
+//   popup.childNodes[1].classList.remove('showPopup');
+// })
+/*****************************************************/
+// const popup = document.querySelector('.popup');
+// const popupContent = document.querySelector('.popup-content');
+// const x = document.querySelector('.popup-content h1');
+// const popupSound = document.getElementById('popup-sound');
+// const hasPopupShown = sessionStorage.getItem('popupShown');
+
+// if (!hasPopupShown) {
+//   popup.classList.add('showPopup');
+//   popupContent.classList.remove('hidden');
+//   sessionStorage.setItem('popupShown', true);
+//   popupSound.play();
+// }
+// x.addEventListener('click', () => {
+//   popup.classList.remove('showPopup');
+//   popupContent.classList.add('hidden');
+// })
+/*************************************************/
+// const popup = document.querySelector('.popup');
+// const popupContent = document.querySelector('.popup-content');
+// const x = document.querySelector('.popup-content h1');
+// const popupSound = document.getElementById('popup-sound');
+// const lastPopupTime = localStorage.getItem('lastPopupTime');
+
+// if (!lastPopupTime || Date.now() - lastPopupTime >= 24 * 60 * 60 * 1000) {
+//   popup.classList.add('showPopup');
+//   popupContent.classList.remove('hidden');
+//   localStorage.setItem('lastPopupTime', Date.now());
+//   popupSound.play();
+// }
+// x.addEventListener('click', () => {
+//   popup.classList.remove('showPopup');
+//   popupContent.classList.add('hidden');
+// })
+
+/**************************************************************/
+
+// const popup = document.querySelector('.popup');
+// const popupContent = document.querySelector('.popup-content');
+// const x = document.querySelector('.popup-content h1');
+// const popupSound = document.getElementById('popup-sound');
+// const hasPopupShown = sessionStorage.getItem('popupShown');
+// const lastShown = localStorage.getItem('popupLastShown');
+// if (!hasPopupShown && (!lastShown || (Date.now() - lastShown > 86400000))) {
+//   popup.classList.add('showPopup');
+//   popupContent.classList.remove('hidden');
+//   sessionStorage.setItem('popupShown', true);
+//   localStorage.setItem('popupLastShown', Date.now());
+//   popupSound.play();
+// }
+
+// x.addEventListener('click', () => {
+//   popup.classList.remove('showPopup');
+//   popupContent.classList.add('hidden');
+// });
+
+// window.addEventListener('beforeunload', () => {
+//   sessionStorage.removeItem('popupShown');
+// });
+
+/***********************************************************/
+const popup = document.querySelector('.popup');
+const popupContent = document.querySelector('.popup-content');
+const x = document.querySelector('.popup-content h1');
+const popupSound = document.getElementById('popup-sound');
+popup.classList.add('showPopup');
+popupContent.classList.remove('hidden');
+popupSound.play();
+x.addEventListener('click', () => {
+  popup.classList.remove('showPopup');
+  popupContent.classList.add('hidden');
+});
+window.addEventListener('load', () => {
+  popupSound.play();
+});
