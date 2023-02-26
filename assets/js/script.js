@@ -203,3 +203,110 @@ x.addEventListener('click', () => {
 window.addEventListener('load', () => {
   popupSound.play();
 });
+
+/***********************Email Validation********************************/
+
+function validateEmail(email) {
+  let pattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,3}$/;
+  return pattern.test(email);
+}
+let emailInput = document.querySelector("#form__email");
+let validEmail = false;
+emailInput.addEventListener("keyup", () => {
+  validEmail = validateEmail(emailInput.value);
+  let emailIcon = document.querySelector(".email-icon");
+  if (emailInput.value === "") {
+    emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+    emailIcon.style.color = "#b4b4b4";
+  } else if (validEmail) {
+    emailIcon.classList.replace("uil-envelope", "uil-check-circle");
+    emailIcon.style.color = "#4bb543";
+  } else {
+    emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+    emailIcon.style.color = "#de0611";
+  }
+});
+function sendmail() {
+  let name = document.getElementById("form__name");
+  let email = document.getElementById("form__email");
+  let msg = document.getElementById("form__msg");
+  let submit = document.getElementById("email_btn");
+  submit.addEventListener("click", () => {
+    if (
+      email.value == "" ||
+      name.value == "" ||
+      msg.value == ""
+    ) {
+      error();
+    }
+    if (validEmail === true) {
+      sendEmail();
+      alert("Message sent successfully!");
+      let form = document.getElementById("contact__form");
+      form.reset();
+    } else {
+      alert("Please enter a valid email address.");
+    }
+  });
+}
+sendmail();
+function error() {
+  alert("Please fill all the details");
+}
+function sendEmail() {
+  var templateParams = {
+    from_name: document.getElementById("form__name").value,
+    mesg: document.getElementById("form__msg").value,
+    from_email: document.getElementById("form__email").value,
+  };
+  emailjs.send("service_zsnzgwf", "template_gnv1kdg", templateParams).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+    },
+    function (error) {
+      console.log("FAILED...", error);
+    }
+  );
+}
+
+/*******************************Subscribe***************************************/
+
+let popup_subs = document.getElementById("popup-subscribe");
+
+function openPopup() {
+  popup_subs.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup_subs.classList.remove("open-popup");
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function sendmail_subs() {
+  let email_subs = document.getElementById("email-subs");
+  let btn_subs = document.getElementById("btn-subs");
+  btn_subs.addEventListener("click", () => {
+    let email = email_subs.value;
+    if (isValidEmail(email)) {
+      var templateParams = {
+        from_email: email,
+      };
+      openPopup();
+      emailjs.send("service_te4wntg", "template_jeibhlf", templateParams).then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+      email_subs.value = "";
+    } else {
+      alert("Please enter a valid email address.");
+    }
+  });
+}
+sendmail_subs();
