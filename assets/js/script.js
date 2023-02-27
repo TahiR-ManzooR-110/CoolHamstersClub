@@ -204,6 +204,7 @@ window.addEventListener('load', () => {
   popupSound.play();
 });
 
+
 /***********************Email Validation********************************/
 
 function validateEmail(email) {
@@ -310,3 +311,23 @@ function sendmail_subs() {
   });
 }
 sendmail_subs();
+/***************************Timer*******************************/
+var countDownDate=new Date("Aug 5, 2023 00:00:00").getTime();
+const timer = setInterval(async function() {
+  try {
+    var now = new Date().getTime();
+    var diff=countDownDate-now;
+    var days=Math.floor(diff/(1000*60*60*24));
+    var hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    var minutes=Math.floor((diff%(1000*60*60))/(1000*60));
+    var seconds=Math.floor((diff%(1000*60))/1000);
+    const countdown = document.getElementById("timer");
+    countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    if (diff <= 0) {
+      clearInterval(timer);
+      countdown.innerHTML = "The minting button will be visible shortly.";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}, 1000);
