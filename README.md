@@ -4,5 +4,3 @@
 
 <p align="center"><img width="450" heigth="650" src="./assets/images/cool-hams.gif" alt="Cool-Hams"></p>
 
-# Tech Stack
-
